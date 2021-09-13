@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f1f1f1" />
+    <meta
+      name="description"
+      content="Get recipees bby searching for a dish name or an ingredient and instantly get the required ingredients plus an instruction guide on how to prepare that specific meal!"
+    />
+    <link rel="icon" href="./chef.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Meal Recipes</title>
+  </head>
+  <body>
+    <!-- Credits Modal -->
+    <div class="bg-modal">
+      <div class="modal-content">
+        <!-- Close Modal Btn -->
+        <div class="close">+</div>
+        <!-- Close Modal Btn -->
+
+        <img src="./chef.png" alt="Chef Icon" />
+        <p id="modal-paragraph">
+          <strong
+            >Every meal that is available on this website is being fetched from
+            <a href="https://www.themealdb.com/api.php/" target="_blank"
+              >"themealdb API"</a
+            >
+            which is a free API that provides meals alongside their ingredients
+            and instructions on how to make the meal itself.</strong
+          >
+        </p>
+        <a
+          id="credit-btn"
+          href="https://www.themealdb.com/api.php/"
+          target="_blank"
+          >Visit API</a
+        >
+      </div>
+    </div>
+    <!-- Credits Modal -->
+
+    <!-- Categories Modal -->
+    <div class="bg-category">
+      <div class="category-content">
+        <!-- Close Btn -->
+        <div class="close-category">+</div>
+        <!-- Close Btn -->
+        <ul id="category-list">
+          <li class="category-list-li" id="seafood-li">
+            <span class="number">1</span>
+            <span class="name">Seafood</span>
+            <span class="badge"><i class="fas fa-fish"></i></span>
+          </li>
+          <li class="category-list-li" id="vegan-li">
+            <span class="number">2</span>
+            <span class="name">Vegan</span>
+            <span class="badge"><i class="fas fa-carrot"></i></span>
+          </li>
+          <li class="category-list-li" id="vegeterian-li">
+            <span class="number">3</span>
+            <span class="name">Vegeterian</span>
+            <span class="badge"><i class="fas fa-seedling"></i></span>
+          </li>
+          <li class="category-list-li" id="breakfast-li">
+            <span class="number">4</span>
+            <span class="name">Breakfast</span>
+            <span class="badge"><i class="fas fa-coffee"></i></span>
+          </li>
+          <li class="category-list-li" id="desert-li">
+            <span class="number">5</span>
+            <span class="name">Desert</span>
+            <span class="badge"><i class="fas fa-cookie"></i></span>
+          </li>
+          <li class="category-list-li" id="starter-li">
+            <span class="number">6</span>
+            <span class="name">Starter</span>
+            <span class="badge"><i class="fas fa-utensils"></i></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Categories Modal -->
+    <!-- Icons for Nav -->
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close"><i class="fas fa-times"></i></button>
+          <button id="open"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="./index.html"
+          ><img src="./chef128.png" alt="Main Chef Logo" />
+        </a>
+      </div>
+      <!-- Logo -->
+      <!-- Icons for Nav -->
+      <!-- Page Content -->
+      <div class="content">
+        <!-- Meal Finder App -->
+        <div class="containerr">
+          <div class="flex">
+            <form id="submit" class="flex">
+              <input
+                type="text"
+                id="search"
+                placeholder="Search for meals or keywords..."
+                autocomplete="off"
+              />
+              <button class="search-btn" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+
+            <button
+              class="random-btn"
+              id="random"
+              title="Click to generate a random meal!"
+            >
+              <i class="fas fa-random"></i>
+            </button>
+          </div>
+
+          <div id="result-heading"></div>
+          <div id="meals" class="meals"></div>
+          <div id="single-meal"></div>
+        </div>
+        <!-- Meal Finder App -->
+      </div>
+    </div>
+    <!-- Page Content -->
+
+    <!-- Navbar -->
+    <nav>
+      <ul>
+        <li><i class="fas fa-home"></i><a href="./index.html"> Home</a></li>
+        <li>
+          <i class="fas fa-users-cog"></i>
+          <span id="creds-modal-btn">Credits</span>
+        </li>
+        <li>
+          <i class="fas fa-cocktail"></i
+          ><span id="category-modal-btn">Categories</span>
+        </li>
+      </ul>
+    </nav>
+    <!-- Navbar -->
+    <script src="./script.js"></script>
+  </body>
+</html>
