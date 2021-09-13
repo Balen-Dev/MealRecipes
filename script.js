@@ -205,12 +205,12 @@ function addRandomMealToDOM (meal) {
       <h1>${meal.strMeal}</h1>
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
       <div class="single-meal-info"> 
-        ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ''}
-        ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
+        ${meal.strCategory ? `<p><span class="categoryAndOrigin">Category:</span> ${meal.strCategory}</p>` : ''}
+        ${meal.strArea ? `<p><span class="categoryAndOrigin">Origin:</span> ${meal.strArea}</p>` : ''}
       </div>
 
       <div class="main"> 
-        <p>${meal.strInstructions}</p>
+        <p id="meal-making-instructions">${meal.strInstructions}</p>
         <hr/>
         <h2>Ingredients</h2>
 
