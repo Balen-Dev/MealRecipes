@@ -33,6 +33,8 @@ function searchMeal (e) {
 
       if (data.meals === null) {
         resultHeading.innerHTML = `<p>There are no search results for (${term}), try another serach term please! </p>`
+        
+        mealsEl.innerHTML = "";
       }
       else {
         mealsEl.innerHTML = data.meals.map(meal => `
